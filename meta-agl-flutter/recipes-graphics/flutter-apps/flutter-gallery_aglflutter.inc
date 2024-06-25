@@ -1,5 +1,9 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/flutter-gallery:"
 
+# Override SRC_URI to handle branch rename to "main"
+SRC_URI = "git://github.com/flutter/gallery.git;lfs=0;branch=main;protocol=https;destsuffix=git"
+
+# Add our desired systemd unit
 SRC_URI += "file://flutter-gallery.service"
 
 inherit systemd
