@@ -6,9 +6,9 @@ require recipes-platform/images/agl-lxc-multiconfig-build.inc
 OUT_OF_TREE_CONTAINER_IMAGE_DEPLOY_DIR ??= ""
 
 OUT_OF_TREE_CONTAINER_IMAGES ??= " \
-    agl-ivi-demo-platform \
-    agl-ivi-demo-platform-flutter \
-    agl-ivi-demo-platform-html5 \
+    agl-ivi-demo-qt \
+    agl-ivi-demo-flutter \
+    agl-ivi-demo-html5 \
 "
 
 OUT_OF_TREE_CONTAINER_CONFIGS ??= " \
