@@ -1,5 +1,5 @@
 DESCRIPTION = "Panasonic UHMI ivi-window-manager"
-DEPENDS = " weston wayland-ivi-extension jansson"
+DEPENDS = " weston grpc grpc-native wayland-ivi-extension jansson"
 
 RDEPENDS:${PN} = " jansson"
 
@@ -19,8 +19,7 @@ PV = "0.0+git${SRCPV}"
 
 S = "${WORKDIR}/git"
 
-inherit cmake
-
+inherit meson pkgconfig
 
 inherit systemd
 SRC_URI += " file://uhmi-ivi-wm.service"
