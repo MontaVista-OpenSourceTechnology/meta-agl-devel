@@ -110,11 +110,13 @@
 					"hwaddr":	"00:16:3e:xx:xx:xx",
 					"mode": "bridge"
 				}
-			}
-		],
-		"dynamic": [
+			},
 			{
-				"ifname": 	"vxcan0"
+				"type": 	"vxcan",
+				"param": {
+					"name":	"can0",
+					"upstream": 	"can0"
+				}
 			}
 		]
 	}
