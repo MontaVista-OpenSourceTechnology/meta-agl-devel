@@ -6,4 +6,5 @@ AGL_META_QT6 = "${METADIR}/external/meta-qt6"
 
 BBLAYERS =+ " \
   ${METADIR}/meta-agl-devel/meta-agl-ic-container \
+  ${METADIR}/meta-agl-demo/meta-agl-demo-shared \
 "
