@@ -11,7 +11,7 @@ IMAGE_INSTALL += " \
     mominavi \
     momiplay \
     momiweather \
-    systemd-netif-config \
+    systemd-conf-ether \
     ttf-dejavu-sans \
     ttf-dejavu-sans-mono \
     ttf-dejavu-sans-condensed \

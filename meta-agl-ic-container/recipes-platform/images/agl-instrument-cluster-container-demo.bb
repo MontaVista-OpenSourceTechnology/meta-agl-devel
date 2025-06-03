@@ -19,10 +19,10 @@ IMAGE_INSTALL += " \
     container-manager \
     cm-config-cluster-demo \
     cm-config-agl-momi-ivi-demo \
+    systemd-conf-canbus systemd-conf-ether systemd-conf-usb \
     lxc-networking \
     iptables-modules \
     dnsmasq \
-    systemd-netif-config \
     kernel-module-xt-addrtype \
     kernel-module-xt-multiport \
 "

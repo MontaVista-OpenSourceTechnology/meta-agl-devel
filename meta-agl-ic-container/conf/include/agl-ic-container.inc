@@ -8,3 +8,6 @@ BBMULTICONFIG = "agl-container-cluster agl-container-ivi"
 INHERIT:remove = "sanity-meta-virt"
 
 include mc-conf-${BB_CURRENT_MC}.inc
+
+# network manager to use
+VIRTUAL-RUNTIME_net_manager = "systemd"
