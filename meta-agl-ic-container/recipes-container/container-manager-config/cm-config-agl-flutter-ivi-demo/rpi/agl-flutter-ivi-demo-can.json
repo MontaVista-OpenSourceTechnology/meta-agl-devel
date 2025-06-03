@@ -9,8 +9,8 @@
 			"filesystem":	"ext4",
 			"mode":		"rw",
 			"blockdev": [
-				"/dev/mmcblk1p5",
-				"/dev/mmcblk1p5"
+				"/dev/mmcblk0p7",
+				"/dev/mmcblk0p7"
 			]
 		},
 		"lifecycle": {
@@ -26,18 +26,6 @@
 			"HOME=/home/root"
 		]
 	},
-	"resource": [
-		{
-			"type":		"cgroupv2",
-			"object":	"cpuset.cpus",
-			"value":	"1-7"
-		},
-		{
-			"type":		"prlimit",
-			"object":	"rtprio",
-			"value":	"50"
-		}
-	],
 	"fs": {
 		"mount": [
 			{
@@ -110,29 +98,11 @@
 				"optional": 		1,
 				"wideallow": 	1,
 				"exclusive": 	0
-			},
-			{
-				"type": 		"devdir",
-				"from": 		"/dev/snd",
-				"to":			"dev/snd",
-				"devnode":		"/dev/snd/controlC0",
-				"optional": 		1,
-				"wideallow": 	1,
-				"exclusive": 	0
-			},
-			{
-				"type": 		"devnode",
-				"from": 		"/dev/pvr_sync",
-				"to":			"dev/pvr_sync",
-				"devnode":		"/dev/pvr_sync",
-				"optional": 		0,
-				"wideallow": 	0,
-				"exclusive": 	0
 			}
 		],
-"dynamic": [
+		"dynamic": [
 			{
-				"devpath": "/devices/platform/soc/ee0a0100.usb/usb2/",
+				"devpath": "/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/",
 				"items": [
 					{
 						"subsystem": "usb",
@@ -168,7 +138,7 @@
 				]
 			},
 			{
-				"devpath": "/devices/platform/soc/ee0a0100.usb/usb2/",
+				"devpath": "/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/",
 				"items": [
 					{
 						"subsystem": "hid",
