@@ -8,6 +8,6 @@ SRC_URI:append = " \
 
 do_install:append () {
     install -d ${D}/${sysconfdir}/xdg/weston
-    install -m 644 ${WORKDIR}/${WESTON_INIT_IVI_SHELL} ${D}/${sysconfdir}/xdg/weston/
+    install -m 644 ${UNPACKDIR}/${WESTON_INIT_IVI_SHELL} ${D}/${sysconfdir}/xdg/weston/
 	  ln -nfs ${sysconfdir}/xdg/weston/${WESTON_INIT_IVI_SHELL} ${D}/${sysconfdir}/xdg/weston/weston.ini
 }

@@ -17,8 +17,6 @@ SRC_URI = " \
     "
 SRCREV = "58c1fbc64aafec86fc64a65a18a77f348257cb2b"
 
-S = "${WORKDIR}/git"
-
 inherit autotools pkgconfig systemd features_check
 
 REQUIRED_DISTRO_FEATURES = "systemd"
@@ -32,10 +30,10 @@ do_install:append() {
     install -d ${D}/opt/container/guests/
 
     install -d ${D}${systemd_system_unitdir}
-    install -m 0644 ${WORKDIR}/container-manager.service ${D}${systemd_system_unitdir}/
+    install -m 0644 ${UNPACKDIR}/container-manager.service ${D}${systemd_system_unitdir}/
 
     install -d ${D}${sysconfdir}
-    install -m 0644 ${WORKDIR}/container-manager.json ${D}${sysconfdir}/
+    install -m 0644 ${UNPACKDIR}/container-manager.json ${D}${sysconfdir}/
 }
 
 FILES:${PN} += " \

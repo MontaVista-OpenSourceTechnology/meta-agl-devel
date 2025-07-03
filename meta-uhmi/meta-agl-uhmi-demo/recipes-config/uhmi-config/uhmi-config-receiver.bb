@@ -8,6 +8,6 @@ SRC_URI = " \
 
 do_install() {
     install -d ${D}/etc/systemd/system/uhmi-ivi-wm.service.d/
-    install -m 0644 ${WORKDIR}/uhmi-ivi-wm.conf ${D}/etc/systemd/system/uhmi-ivi-wm.service.d/
+    install -m 0644 ${UNPACKDIR}/uhmi-ivi-wm.conf ${D}/etc/systemd/system/uhmi-ivi-wm.service.d/
 }
 

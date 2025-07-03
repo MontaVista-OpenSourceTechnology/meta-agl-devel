@@ -10,11 +10,11 @@ SRC_URI = " \
 
 do_install() {
     install -d ${D}/var/local/uhmi-app/glmark2
-    install -m 644 ${WORKDIR}/app.json ${D}/var/local/uhmi-app/glmark2/
-    install -m 644 ${WORKDIR}/initial_vscreen.json ${D}/var/local/uhmi-app/glmark2/
+    install -m 644 ${UNPACKDIR}/app.json ${D}/var/local/uhmi-app/glmark2/
+    install -m 644 ${UNPACKDIR}/initial_vscreen.json ${D}/var/local/uhmi-app/glmark2/
 
     install -d ${D}/etc/systemd/system/uhmi-ivi-wm.service.d/
-    install -m 0644 ${WORKDIR}/uhmi-ivi-wm.conf ${D}/etc/systemd/system/uhmi-ivi-wm.service.d/
+    install -m 0644 ${UNPACKDIR}/uhmi-ivi-wm.conf ${D}/etc/systemd/system/uhmi-ivi-wm.service.d/
 }
 
 FILES:${PN} += " \
