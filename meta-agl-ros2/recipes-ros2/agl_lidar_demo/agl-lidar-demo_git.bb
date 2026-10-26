@@ -11,7 +11,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 RECIPE_MAINTAINER = "Shaurya Rane <ssranevjti@gmail.com>"
 
-SRCREV = "9c75ebf0ffdb89bf702e3bf02c49ae1590630c7c"
+SRCREV = "2274f87d993c1e413f3a6c17104275ee2118cb88"
 SRCREV:localdev = "${AUTOREV}"
 SRC_URI = "git://github.com/shauryarane05/agl-lidar-hmi-app.git;branch=main;protocol=https;destsuffix=agl-lidar-demo \
            file://agl-lidar-demo.service \
@@ -52,4 +52,5 @@ RDEPENDS:${PN} += " \
     rosbag2-storage-default-plugins \
     rosbridge-server \
     vision-msgs \
+    lidar-detector \
 "
